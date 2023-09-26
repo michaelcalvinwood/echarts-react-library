@@ -15,15 +15,13 @@ function App() {
   const data = [205, 150, 80, 70, 110, 130, 24];
   const labels = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
-
-
   useEffect(() => {
     var chartDom = theChart.current;
     if (!myChart.current) myChart.current = echarts.init(chartDom);
     const gridId = echartUtils.createHorizontalBarChart(0, data, labels, option, setOption)
-    echartUtils.changeBarColor(0, 1, 'blue', option, setOption)
+    //echartUtils.changeBarColor(0, 1, 'blue', option, setOption)
 
-    echartUtils.changeBarColor(0, 3, 'yellow', option, setOption)
+    // echartUtils.changeBarColor(0, 3, 'yellow', option, setOption)
 
     option && myChart.current && myChart.current.setOption(option);
     })
